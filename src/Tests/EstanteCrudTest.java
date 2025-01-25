@@ -18,27 +18,12 @@ public class EstanteCrudTest {
             switch (opcaoEscolhida) {
                 case 1:
                     biblioteca.setLivro();
-                    try {
-                        Thread.sleep(1000);
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    }
                     break;
                 case 2:
                     biblioteca.getLivros();
-                    try {
-                        Thread.sleep(1000);
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    }
                     break;
                 case 3:
                     biblioteca.getLivro();
-                    try {
-                        Thread.sleep(1000);
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    }
                     break;
                 case 4:
                     biblioteca.upLivro();
