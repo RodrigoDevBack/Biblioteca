@@ -106,7 +106,7 @@ public class EstanteCrud {
         estante.remove(idnew);
         if (idnew < estante.size()) {
             for (int i = idnew; i <= (estante.size() - 1); i++) {
-                estante.get(i).remove(0);
+                estante.get(i).removeFirst();
                 estante.get(i).listIterator(0).add(String.valueOf(i));
             }
         }
