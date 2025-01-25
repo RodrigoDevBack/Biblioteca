@@ -27,18 +27,10 @@ public class EstanteCrudTest {
                     break;
                 case 4:
                     biblioteca.upLivro();
-                    try {
-                        Thread.sleep(1000);
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    }
+
                 case 5:
                     biblioteca.deleteLivro();
-                    try {
-                        Thread.sleep(1000);
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    }
+
             }
         } while (opcaoEscolhida != 0);
     }
