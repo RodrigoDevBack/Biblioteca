@@ -14,7 +14,6 @@ public class EstanteCrudTest {
             System.out.println("Bem vindo a estante! \nOpções: \n[1]Adicionar um livro \n[2]Ver livros \n[3]Ver livro específico \n[4]Atualizar livro \n[5]Deletar \n[0]Sair");
             System.out.println("Digite sua escolha: ");
             opcaoEscolhida = inpt.nextInt();
-
             switch (opcaoEscolhida) {
                 case 1:
                     biblioteca.setLivro();

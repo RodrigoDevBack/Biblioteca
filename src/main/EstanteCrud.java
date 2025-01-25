@@ -99,7 +99,6 @@ public class EstanteCrud {
     public void deleteLivro() {
         String id;
         int idnew;
-
         System.out.println("Digite o livro a ser deletado: ");
         id = inpt.nextLine();
         idnew = Integer.parseInt(id);
