@@ -13,7 +13,7 @@ public class EstanteCrud {
         String nameActor;
         String year;
         String id;
-        if (estante.size() < 5){
+        if (estante.size() < 5) {
             ArrayList<String> book = new ArrayList<>();
 
             System.out.println("-----------------------------------------");
@@ -112,7 +112,7 @@ public class EstanteCrud {
         }
     }
 
-    private int setId(String text){
+    private int setId(String text) {
         String id;
         int idNew;
         System.out.println(text);
