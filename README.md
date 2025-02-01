@@ -1,5 +1,5 @@
 # Biblioteca 
-Este é um sistema de uma biblioteca. Ainda eem seu início de desenvolvimento.
+Este é um sistema de uma biblioteca desenvolvido em Java. Ainda em seu início de desenvolvimento.
 
 Prévia de futuras implementações:
 Haverá sistema de incersão de livros, eliminação, correção e percepção visual limitada de dados;
