@@ -1,10 +1,10 @@
-package main;
+package domain;
 
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class EstanteCrud {
-    protected ArrayList<ArrayList<String>> estante = new ArrayList<>();
+    protected ArrayList<ArrayList<String>> bookcase = new ArrayList<>();
 
     protected Scanner scanner = new Scanner(System.in);
 
@@ -13,7 +13,7 @@ public class EstanteCrud {
         String nameActor;
         String year;
         String id;
-        if (estante.size() < 5) {
+        if (bookcase.size() < 5) {
             ArrayList<String> book = new ArrayList<>();
 
             System.out.println("-----------------------------------------");
@@ -29,14 +29,14 @@ public class EstanteCrud {
             year = this.scanner.nextLine();
             System.out.println("-----------------------------------------");
 
-            id = String.valueOf(this.estante.size());
+            id = String.valueOf(this.bookcase.size());
 
             book.add(id);
             book.add(nameBook);
             book.add(nameActor);
             book.add(year);
 
-            this.estante.add(book);
+            this.bookcase.add(book);
             System.out.println("Livro adicionado.");
             return true;
         } else {
@@ -45,10 +45,12 @@ public class EstanteCrud {
         }
     }
 
-    public void getBooks() {
+    public ArrayList<ArrayList<String>> getBooks() {
         System.out.println("-----------------------------------------");
-        System.out.println("Livros atuais: \n" + this.estante);
+        System.out.println("Livros atuais: \n" + this.bookcase);
         System.out.println("-----------------------------------------");
+
+        return this.bookcase;
     }
 
     public void getBook() {
@@ -58,7 +60,7 @@ public class EstanteCrud {
         idNew = setId("Digite o id do livro: ");
         System.out.println("-----------------------------------------");
 
-        String livro = String.valueOf(this.estante.get(idNew));
+        String livro = String.valueOf(this.bookcase.get(idNew));
         System.out.println(livro);
         System.out.println("-----------------------------------------");
     }
@@ -81,20 +83,20 @@ public class EstanteCrud {
             case "1":
                 System.out.println("Digite o novo nome do livro: ");
                 trocar = this.scanner.nextLine();
-                this.estante.get(idNew).remove(1);
-                this.estante.get(idNew).listIterator(1).add(trocar);
+                this.bookcase.get(idNew).remove(1);
+                this.bookcase.get(idNew).listIterator(1).add(trocar);
                 break;
             case "2":
                 System.out.println("Digite autor corrigido: ");
                 trocar = this.scanner.nextLine();
-                this.estante.get(idNew).remove(2);
-                this.estante.get(idNew).listIterator(2).add(trocar);
+                this.bookcase.get(idNew).remove(2);
+                this.bookcase.get(idNew).listIterator(2).add(trocar);
                 break;
             case "3":
                 System.out.println("Digite o ano correto: ");
                 trocar = this.scanner.nextLine();
-                this.estante.get(idNew).remove(3);
-                this.estante.get(idNew).listIterator(3).add(trocar);
+                this.bookcase.get(idNew).remove(3);
+                this.bookcase.get(idNew).listIterator(3).add(trocar);
                 break;
         }
 
@@ -103,11 +105,11 @@ public class EstanteCrud {
     public void deleteBook() {
         int idNew;
         idNew = setId("Digite o livro a ser deletado: ");
-        estante.remove(idNew);
-        if (idNew < estante.size()) {
-            for (int i = idNew; i <= (estante.size() - 1); i++) {
-                estante.get(i).removeFirst();
-                estante.get(i).listIterator(0).add(String.valueOf(i));
+        bookcase.remove(idNew);
+        if (idNew < bookcase.size()) {
+            for (int i = idNew; i <= (bookcase.size() - 1); i++) {
+                bookcase.get(i).removeFirst();
+                bookcase.get(i).listIterator(0).add(String.valueOf(i));
             }
         }
     }
