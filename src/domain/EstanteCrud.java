@@ -8,6 +8,11 @@ public class EstanteCrud {
 
     protected Scanner scanner = new Scanner(System.in);
 
+    public void trocarEstante(ArrayList<ArrayList<String>> trocarBookcase){
+        this.bookcase.clear();
+        this.bookcase = trocarBookcase;
+    }
+
     public boolean setBook() {
         String nameBook;
         String nameActor;
